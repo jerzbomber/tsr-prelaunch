@@ -1,0 +1,124 @@
+html {
+  height: 100%;
+  margin-top: 0 !important;
+}
+
+body {
+  padding: 0 0px;
+  height: 100%;
+  font-family: 'Raleway';
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1em;
+  color: #ffffff; 
+}
+
+#page {
+  padding: 60px 10px 0 10px;
+  min-height: 100%;
+  height: 100%;
+}
+
+.flexbox {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  height: 100%;
+}
+
+.flexbox #content {
+  width: 40%;
+  padding: 30px;
+  /*background-color: rgba(255, 255, 255, 0.2);*/
+}
+
+#headline-row {
+  text-align: center;
+}
+
+#headline {
+  font-weight: 700;
+  font-size: 48px;
+  color: #ffffff;
+  line-height: 0.95em;
+  margin-top: 107px;
+  margin-bottom: 55px;
+}
+
+button {
+  font-weight: 700;
+}
+
+#description-row {
+  text-align: center;
+}
+
+#description {
+  margin-bottom: 30px;
+  font-size: 22px;
+  font-weight: 700;
+  padding: 0 75px;
+} 
+
+#logo {
+  position: absolute;
+  top: 0px;
+  left: 86px;
+  height: 250px;
+  width: 250px;
+}
+
+.row {
+  margin-bottom: 10px;
+}
+
+#submit-container {
+  text-align: center;
+}
+
+#privacy-policy-text {
+  text-align: center;
+  font-size: 11px;
+}
+
+#success-alert {
+  text-align: left;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,.15);
+  color: #666;
+}
+
+#mc_embed_signup {
+  background:#fff; 
+  clear:left; 
+  font:14px Helvetica,Arial,sans-serif; 
+  width:100%;
+}
+
+video#bgvid {
+  position:fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url('/images/3082525.jpg') no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-device-width: 800px) {
+    html {
+         background: url(images/3082525.jpg) #000 no-repeat center center fixed;
+    }
+    #bgvid {
+        display: none;
+    }
+}
