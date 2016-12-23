@@ -22,10 +22,11 @@ block content
             div(id='emailGroup', class='form-group')
               input(type='email', id='email', name='email', class='form-control', placeholder='Email')
             div(id="submit-container" class='form-group')
-              button(type='button', class='btn btn-warning', onclick='signup();')= 'Let me know when it\'s ready!'
+              button(type='button', class='btn btn-warning', onclick=`signup("${host}");`)= 'Let me know when it\'s ready!'
           div(id='privacy-policy-text')
             span
               a(href='', target='_blank', rel='nofollow', class='text-white')= 'We promise to never spam you.'
+            | Host #{host}
           div(id='success-alert', class='alert alert-success', role='alert', hidden)
             strong 
               | You Got It!

@@ -1,14 +1,13 @@
-function signup() {
+function signup(host) {
     if (!validate()) return;    
     let data = $('#signup-form').serialize();
-    $.post('http://52.90.163.199/signup', data, function(res) {
+    $.post(`http://${host}/signup`, data, function(res) {
         if (res.error) {
             console.log('error', res.error);
-            // showAlert('danger', res.error);
-        } else {
-            $('#success-alert').removeAttr('hidden');
-            clearFields();
-        }
+        } 
+
+        $('#success-alert').removeAttr('hidden');
+        clearFields();
     });
 }
 
