@@ -150,6 +150,10 @@ video#bgvid {
       margin-bottom: 10px;
     }
 
+    #signup-form {
+      margin-top: 10px;
+    }
+
     .form-control {
       line-height: 0.25;
       font-size: 0.75rem;
