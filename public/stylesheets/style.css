@@ -163,6 +163,10 @@ video#bgvid {
       font-size: 0.75rem;
     }
 
+    #signup-form .row {
+      margin-bottom: 0;
+    }
+
     #privacy-policy-text {
       text-align: center;
       font-size: 7px;
@@ -175,5 +179,6 @@ video#bgvid {
 
     #success-alert {
       font-size: 0.60rem;
+      padding: .5rem 1rem;
     }
 }
