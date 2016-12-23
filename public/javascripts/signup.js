@@ -1,7 +1,7 @@
 function signup() {
     if (!validate()) return;    
     let data = $('#signup-form').serialize();
-    $.post('http://localhost:3000/signup', data, function(res) {
+    $.post('http://52.90.163.199/signup', data, function(res) {
         if (res.error) {
             console.log('error', res.error);
             // showAlert('danger', res.error);

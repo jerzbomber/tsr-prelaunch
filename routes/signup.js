@@ -5,7 +5,6 @@ var Mailchimp = require('mailchimp-api-v3');
 
 /* POST signup */
 router.post('/', function(req, res, next) {
-    console.log('posted to signup');
     var firstName = req.body.firstName;
     var lastName = req.body.lastName;
     var email = req.body.email;
