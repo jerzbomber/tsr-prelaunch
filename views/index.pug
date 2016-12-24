@@ -15,14 +15,14 @@ block content
         div(class='container')
           form(id='signup-form', name='signupForm')
             div(class='row')
-              div(id='firstNameGroup', class='form-group col-md-6')
-                input(type='text', id='firstName', name='firstName', class='form-control', placeholder='First')
-              div(id='lastNameGroup', class='form-group col-md-6')
-                input(type='text', id='lastName', name='lastName' class='form-control', placeholder='Last')
-            div(id='emailGroup', class='form-group')
+              div(id='first-name-group', class='form-group col-md-6')
+                input(type='text', id='first-name', name='firstName', class='form-control', placeholder='First')
+              div(id='last-name-group', class='form-group col-md-6')
+                input(type='text', id='last-name', name='lastName' class='form-control', placeholder='Last')
+            div(id='email-group', class='form-group')
               input(type='email', id='email', name='email', class='form-control', placeholder='Email')
-            div(id="submit-container" class='form-group')
-              button(type='button', class='btn btn-warning', onclick=`signup("${host}");`)= 'Let me know when it\'s ready!'
+            div(id='submit-container' class='form-group')
+              button(id='submit-button', type='button', class='btn btn-warning', onclick=`signup("${host}");`)= 'Let me know when it\'s ready!'
           div(id='privacy-policy-text')
             span
               a(href='', target='_blank', rel='nofollow', class='text-white')= 'We promise to never spam you.'

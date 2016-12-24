@@ -1,6 +1,7 @@
 function signup(host) {
     if (!validate()) return;    
     let data = $('#signup-form').serialize();
+
     $.post(`http://${host}/signup`, data, function(res) {
         if (res.error) {
             console.log('error', res.error);
@@ -11,8 +12,8 @@ function signup(host) {
 }
 
 function validate() {
-    let first = $.trim($('#firstName').val());
-    let last = $.trim($('#lastName').val());
+    let first = $.trim($('#first-name').val());
+    let last = $.trim($('#last-name').val());
     let email = $.trim($('#email').val());
 
     let isFirstValid = validateFirstName();
@@ -33,30 +34,30 @@ function clearFields() {
 }
 
 function validateFirstName() {
-    return validateTextField('#firstName', '#firstNameGroup');
+    return validateTextField('#first-name', '#first-name-group');
 } 
 
 function clearFirstName() {
-    $('#firstName').val('');
-    clearFieldState('#firstName', '#firstNameGroup');
+    $('#first-name').val('');
+    clearFieldState('#first-name', '#first-name-group');
 }
 
 function validateLastName() {
-    return validateTextField('#lastName', '#lastNameGroup');
+    return validateTextField('#last-name', '#last-name-group');
 }
 
 function clearLastName() {
-    $('#lastName').val('');
-    clearFieldState('#lastName', '#lastNameGroup');
+    $('#last-name').val('');
+    clearFieldState('#last-name', '#last-name-group');
 }
 
 function validateEmail() {
-    return validateEmailField('#email', '#emailGroup');
+    return validateEmailField('#email', '#email-group');
 }
 
 function clearEmail() {
     $('#email').val('');
-    clearFieldState('#email', '#emailGroup');
+    clearFieldState('#email', '#email-group');
 }
 
 function validateTextField(fieldSelector, groupSelector) {
@@ -99,11 +100,11 @@ function clearFieldState(fieldSelector, groupSelector) {
 }
 
 $(function() {
-    $('#firstName').blur(function() {
+    $('#first-name').blur(function() {
         validateFirstName();
     });
 
-    $('#lastName').blur(function() {
+    $('#last-name').blur(function() {
         validateLastName();
     });
 
