@@ -5,7 +5,6 @@ function signup(host) {
         if (res.error) {
             console.log('error', res.error);
         } 
-
         $('#success-alert').removeAttr('hidden');
         clearFields();
     });
