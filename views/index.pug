@@ -4,7 +4,8 @@ block content
   video(playsinline, autoplay, muted, loop, poster='/images/3082525.jpg', id='bgvid')
     source(src='/videos/3082525.webmhd.webm', type='video/webm')
     source(src='/videos/3082525.mp4', type='video/mp4')
-  img(id='logo', src='/images/TSR_LOGO-01.png')
+  a(id='logo', href=host)
+    img(id='logo-image', src='/images/TSR_LOGO-01.png')
   div(class='flexbox')
     div(id='content')
       div(id='headline-row', class='row')
@@ -23,10 +24,10 @@ block content
               input(type='email', id='email', name='email', class='form-control', placeholder='Email')
             div(id='submit-container' class='form-group')
               button(id='submit-button', type='button', class='btn btn-warning', onclick=`signup("${host}");`)= 'Let me know when it\'s ready!'
+              div(id='success-alert', class='alert alert-success', role='alert', hidden)
+                strong 
+                  | You Got It!
+                |  We'll let you know as soon as it's ready!
           div(id='privacy-policy-text')
             span
               a(href='', target='_blank', rel='nofollow', class='text-white')= 'We promise to never spam you.'
-          div(id='success-alert', class='alert alert-success', role='alert', hidden)
-            strong 
-              | You Got It!
-            |  We'll let you know as soon as it's ready!

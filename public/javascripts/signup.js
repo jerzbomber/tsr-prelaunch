@@ -1,11 +1,17 @@
 function signup(host) {
     if (!validate()) return;    
     let data = $('#signup-form').serialize();
+    $('#submit-button').attr('disabled', true);
 
     $.post(`http://${host}/signup`, data, function(res) {
         if (res.error) {
-            console.log('error', res.error);
+            // todo: add specific error handling for api messages
+            // and for connection messages
+            console.error(res.error);
         } 
+        $('#submit-button')
+            .attr('hidden', true)
+            .removeAttr('disabled');
         $('#success-alert').removeAttr('hidden');
         clearFields();
     });

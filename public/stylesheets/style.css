@@ -66,6 +66,9 @@ button {
   position: absolute;
   top: 0px;
   left: 86px;
+}
+
+#logo-image {
   height: 250px;
   width: 250px;
 }
@@ -81,9 +84,9 @@ button {
 
 #success-alert {
   text-align: left;
-  background-color: #fff;
+  /*background-color: #fff;
   border: 1px solid rgba(0,0,0,.15);
-  color: #666;
+  color: #666;*/
 }
 
 #mc_embed_signup {
@@ -126,10 +129,13 @@ video#bgvid {
       height: 100%;
     }
 
-    img#logo {
+    #logo {
       position: absolute;
       top: 0px;
       left: 35px;
+    }
+
+    #logo-image {
       height: 100px;
       width: 100px;
     }
