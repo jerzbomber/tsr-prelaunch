@@ -1,0 +1,42 @@
+extends layout
+
+block content
+    a(id='logo', href=`http://${host}`)
+        img(id='logo-image', src='/images/TSR_LOGO-01.png')
+    main(class='container')
+        div(id='privacy-content', class='row')
+            h1(id='privacy-headline')= 'Privacy Policy'
+            p()= `Effective Date: ${process.env.PRIVACY_POLICY_EFFECTIVE_DATE}`
+        div(class='row')
+            h3()= 'What Do You Do With My Information?'
+            p
+                :markdown-it()
+                    At The Sipping Room ("We", "Us", or "Our"), we respect your privacy and take protecting it seriously. This Privacy Policy
+                    covers our collection, use, and disclosure of information we collect through our website and service,
+                    <http://www.thesippingroom.com>, owned and operated by The Tea Company, LLC. 
+
+                    The Sipping Room is committed to protecting the privacy of its members. Our site has been designed and built with our members'
+                    privacy and security front in mind. These principles guide our privacy policy:
+
+                    We employ other companies and people to perform tasks on our behalf and need to share your information with them to provide certain
+                    services to you, such as shipping and credit card processing. We also are affiliated with a variety of businesses, including tea plantations,
+                    and a cafe whose products may be sold to you through our website. We may need to share some of your personal information with them,
+                    but these companies do not retain, share, store or use personally identifieable information beyoned what is necessary to assist us.
+
+                    Registration is required in order to use this website and a user must provide Personal Information prior to using our service. Personal Information
+                    includes such items as name, email, phone number, and shipping address and financial information such as credit card number, expiration date,
+                    billing address, and shipping address. This information is necessary in order for us to contact users to confirm membership, and to facilitate shipping and
+                    billing. 
+
+                    When our signup form asks users to enter sensitive information (such as credit card number), that information is encrypted with SSL (Secure Socket Layers) encryption. Our
+                    third party e-commerce providers, who manage billing and payment processing for our site, also use SSL encryption technology.
+
+
+                        
+    //- div(class='flexbox')
+    //-     div(id='privacy-content')
+    //-         div(id='privacy-headline-row', class='row')
+    //-             h1(id='privacy-headline')= 'Something new is steeping...'
+    //-             p()= `Effective Date:${process.env.PRIVACY_POLICY_EFFECTIVE_DATE}`
+
+            
