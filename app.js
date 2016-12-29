@@ -9,6 +9,7 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var signup = require('./routes/signup');
+var privacy = require('./routes/privacy');
 
 var app = express();
 
@@ -39,6 +40,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
+app.use('/privacy', privacy);
 app.use('/signup', signup);
 
 app.use(expressWinston.errorLogger({
