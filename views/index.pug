@@ -23,11 +23,11 @@ block content
             div(id='email-group', class='form-group')
               input(type='email', id='email', name='email', class='form-control', placeholder='Email')
             div(id='submit-container' class='form-group')
-              button(id='submit-button', type='button', class='btn btn-warning', onclick=`signup("${host}");`)= 'Let me know when it\'s ready!'
+              button(id='submit-button', type='button', class='btn btn-warning', onclick=`signup(\'${apiServer}\');`)= 'Let me know when it\'s ready!'
               div(id='success-alert', class='alert alert-success', role='alert', hidden)
                 strong 
                   | You Got It!
-                |  We'll let you know as soon as it's ready!
+                  |  We'll let you know as soon as it's ready!
           div(id='privacy-policy-link')
             span
               a(href='/privacy', class='text-white')= 'We promise to never spam you.'

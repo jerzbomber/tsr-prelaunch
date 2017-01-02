@@ -3,7 +3,13 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "build-dev": "pug ./views/index.pug --out ./public -P -O pugoptions.dev.json",
+    "build-stage": "pug ./views/index.pug --out ./public -P -O pugoptions.stage.json",
+    "build-prod": "pug ./views/index.pug --out ./public -P -O pugoptions.prod.json",
+    "deploy-dev": "scp -r -i resources/aws.pem ./public/* bitnami@ec2-52-90-163-199.compute-1.amazonaws.com:/var/www/dev.thesippingroom.com/html/",
+    "deploy-stage": "scp -r -i resources/aws.pem ./public/* bitnami@ec2-52-90-163-199.compute-1.amazonaws.com:/var/www/stage.thesippingroom.com/html/",
+    "deploy-prod": "scp -r -i resources/aws.pem ./public/* bitnami@ec2-52-90-163-199.compute-1.amazonaws.com:/var/www/thesippingroom.com/html/"
   },
   "dependencies": {
     "body-parser": "~1.15.2",
@@ -17,5 +23,8 @@
     "pug": "^2.0.0-beta6",
     "serve-favicon": "~2.3.0",
     "winston": "^2.3.0"
+  },
+  "devDependencies": {
+    "pug-cli": "^1.0.0-alpha6"
   }
 }
