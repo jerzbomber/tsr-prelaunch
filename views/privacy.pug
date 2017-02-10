@@ -1,13 +1,11 @@
 extends layout
 
 block content
-    a(id='logo', href=`http://${host}`)
-        img(id='logo-image', src='/images/TSR_LOGO-01.png')
-    main(class='container')
-        div(id='privacy-content', class='row')
+    main(id='privacy-container' class='container')
+        div(class='row')
             h1(id='privacy-headline')= 'Privacy Policy'
             p()= `Effective Date: ${process.env.PRIVACY_POLICY_EFFECTIVE_DATE}`
-        div(class='row')
+            
             h3()= 'What Do You Do With My Information?'
             p
                 :markdown-it()

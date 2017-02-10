@@ -142,6 +142,10 @@ video#bgvid {
   justify-content: center;
 }
 
+#privacy-container {
+  margin-top: 20px
+}
+
 @media screen and (max-device-width: 800px) {
     body {
          /*background: url('../images/3082525.jpg') #000 no-repeat center center fixed;*/
