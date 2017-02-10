@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "build-dev": "pug ./views/index.pug --out ./public -P -O pugoptions.dev.json",
-    "build-stage": "pug ./views/index.pug --out ./public -P -O pugoptions.stage.json",
-    "build-prod": "pug ./views/index.pug --out ./public -P -O pugoptions.prod.json",
+    "build-dev": "pug views --out ./public -P -O pugoptions.dev.json",
+    "build-stage": "pug views --out ./public -P -O pugoptions.stage.json",
+    "build-prod": "pug views --out ./public -P -O pugoptions.prod.json",
     "deploy-dev": "scp -r -i resources/aws.pem ./public/* bitnami@ec2-52-90-163-199.compute-1.amazonaws.com:/var/www/dev.thesippingroom.com/html/",
     "deploy-stage": "scp -r -i resources/aws.pem ./public/* bitnami@ec2-52-90-163-199.compute-1.amazonaws.com:/var/www/stage.thesippingroom.com/html/",
     "deploy-prod": "scp -r -i resources/aws.pem ./public/* bitnami@ec2-52-90-163-199.compute-1.amazonaws.com:/var/www/thesippingroom.com/html/"
