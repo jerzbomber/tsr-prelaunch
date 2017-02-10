@@ -136,6 +136,12 @@ video#bgvid {
   margin-bottom: 55px;
 }
 
+.addthis_inline_follow_toolbox {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
 @media screen and (max-device-width: 800px) {
     body {
          /*background: url('../images/3082525.jpg') #000 no-repeat center center fixed;*/
